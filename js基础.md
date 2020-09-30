@@ -4,11 +4,6 @@
 - DOM：JavaScript 操作网页上的元素的 API。
 - BOM：JavaScript 操作浏览器的部分功能的 API。
 
-pack
-query
-
-- - pa
-
 #### JavaScript 的特点
 
 - 可以使用任何文本编辑工具编写，然后使用浏览器就可以执行程序。
@@ -50,3 +45,12 @@ x = 50; // 变量 x 为整数
   >```var myNameArray = ['Tom', 'Bob', 'Jim']; var myNumberArray = [10, 15, 20];```
 
 - Object：对象类型。
+
+
+
+
+
+
+//pack
+//query
+
