@@ -94,7 +94,8 @@ console.log(num2);
 
   
 ### 比较运算符  
-  ![比较运算符](https://github.com/Lixk100/js/blob/master/%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6.png)
+  ![比较运算符](https://github.com/Lixk100/js/blob/master/%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6.png)  
+
 在控制台中输入这些示例，如果成立的话会返回 true 如果不成立的话则返回 false  
 
 ### 逻辑运算符  
