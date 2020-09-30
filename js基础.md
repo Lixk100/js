@@ -90,18 +90,18 @@ console.log(num2);
 后者是先自增再赋值。同样的 num-- 和 --num 也是一样的效果  
 ###  操作运算符
 
-###    ![操作运算符](C:\Users\MI\Documents\GitHub\js\操作运算符.png)
+###    ![操作运算符](https://github.com/Lixk100/js/blob/master/%E6%93%8D%E4%BD%9C%E8%BF%90%E7%AE%97%E7%AC%A6.png)
 
   
 ### 比较运算符  
-  ![比较运算符](C:\Users\MI\Documents\GitHub\js\比较运算符.png)
+  ![比较运算符](https://github.com/Lixk100/js/blob/master/%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6.png)
 在控制台中输入这些示例，如果成立的话会返回 true 如果不成立的话则返回 false  
 
 ### 逻辑运算符  
-  ![逻辑运算符](C:\Users\MI\Documents\GitHub\js\逻辑运算符.png)
+  ![逻辑运算符](https://github.com/Lixk100/js/blob/master/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6.png)
 ### 运算符的优先级  
 
-![运算符的优先级](C:\Users\MI\Documents\GitHub\js\运算符的优先级.png)
+![运算符的优先级](https://github.com/Lixk100/js/blob/master/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7.png)
 
 <!-- pack   -->
 <!-- query -->
