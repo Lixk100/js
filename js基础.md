@@ -63,9 +63,39 @@ this
 is
 注释
 */
-```
-
-
-
+```  
+### 数字类型  
+- 整数  
+- 浮点数  
+- 双精数：是一种特定类型的浮点数，具有比标准浮点数更高的精度。  
+不过JavaScript中，数字类型全部用var声明就可以了，并且JavaScript中
+只有一个数据类型：Number   
+### 算数运算符  
+- ++ 累加  
+- ++ 累减
+- % 取余数  
+#### 区别x++ / ++x  
+```  
+var num1 = 3;
+var result1 = num1++;
+console.log(result1);
+console.log(num1);
+var num2 = 4;
+var result2 = ++num2;
+console.log(result2);
+console.log(num2);
+```  
+**最后控制台打印的数字为：3 4 5 5**  
+可以看出 num++ 和 ++num 的区别，前者是先赋值再自增，
+后者是先自增再赋值。同样的 num-- 和 --num 也是一样的效果  
+###  操作运算符  
+![演示](https://doc.shiyanlou.com/document-uid897174labid9222timestamp1547024191664.png)  
+### 比较运算符  
+![](https://doc.shiyanlou.com/document-uid897174labid9222timestamp1547024508797.png)  
+在控制台中输入这些示例，如果成立的话会返回 true 如果不成立的话则返回 false  
+### 逻辑运算符  
+![](https://doc.shiyanlou.com/document-uid18510labid147timestamp1515116985209.png)  
+### 运算符的优先级  
+![](https://doc.shiyanlou.com/document-uid897174labid9222timestamp1547261443500.png)  
 <!-- pack   -->
 <!-- query -->
