@@ -163,9 +163,17 @@ var arr = ['1', '2', '3', '4'];
 arr.push('5', '6');
 arr; // returns ["1", "2", "3", "4", "5", "6"]
 ```
+使用`pop()`方法可以删除数组的最后一个元素，把数组长度减1，并返回它删除的元素的值。如果数组已空，则`pop()`不改变数组，返回`undefined`值。
+> ```
+> var arr = ['1', '2', '3', '4'];
+> arr.pop(); // returns 4
+> arr; // returns ["1", "2", "3"]
+> var arr1 = [];
+> arr1.pop(); // returns undefined
+> arr1; // returns []
+> ```
 
-
-
+`unshift()` 和 `shift()` 从功能上与 `push()` 和 `pop()` 完全相同，只是它们分别作用于数组的开始，而不是结尾。
 
 
 
