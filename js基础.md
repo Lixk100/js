@@ -92,7 +92,7 @@ console.log(num2);
 
 ###    ![操作运算符](https://github.com/Lixk100/js/blob/master/%E6%93%8D%E4%BD%9C%E8%BF%90%E7%AE%97%E7%AC%A6.png)
 
-  
+
 ### 比较运算符  
   ![比较运算符](https://github.com/Lixk100/js/blob/master/%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6.png)  
 
@@ -103,6 +103,71 @@ console.log(num2);
 ### 运算符的优先级  
 
 ![运算符的优先级](https://github.com/Lixk100/js/blob/master/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7.png)
+
+
+
+## 数组概述  
+
+###  数组语法
+
+```
+var myarray = new Array(1, 2, 3, 4, 5); // 创建数组同时赋值 
+// or
+var myarray = [1, 2, 3, 4, 5]; // 直接输入一个数组（称“字面量数组”）
+```
+
+### 多维数组
+
+多维数组就是数组中还包含数组。
+
+```
+var student = [
+  ['张三', '男', '18'],
+  ['李四', '女', '20'],
+];
+student[0][2]; // returns "18"
+```
+
+### 修改数组 
+
+```
+var color = ['red', 'green', 'blue', 'yellow'];
+color[0] = 'black';
+color; // returns ["black", "green", "blue", "yellow"]
+```
+### 获取数组长度 **length** 
+```
+var color = ['red', 'green', 'blue', 'yellow'];
+color.length; // returns 4
+```
+### 数组和字符串之间的转换  
+通过**split()**方法，将字符串转换为数组  
+```
+'1:2:3:4'.split(':'); // returns ["1", "2", "3", "4"]
+'|a|b|c'.split('|'); // returns ["", "a", "b", "c"]
+```
+通过**join()**方法将数组转换为字符串  
+```
+['1', '2', '3', '4'].join(':'); 
+// returns "1:2:3:4"
+['', 'a', 'b', 'c'].join('|'); 
+// returns "|a|b|c"
+```
+>  我们同样可以使用 `toString()` 方法将数组转换为字符串，但是 `join()` 方法可以指定不同的分隔符，而 `toString()` 方法只能是逗号。
+
+### 添加和删除数组项   
+使用**push()**方法在数组尾部添加一个或多个元素。
+
+```
+var arr = ['1', '2', '3', '4'];
+arr.push('5', '6');
+arr; // returns ["1", "2", "3", "4", "5", "6"]
+```
+
+
+
+
+
 
 <!-- pack   -->
 <!-- query -->
