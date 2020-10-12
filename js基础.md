@@ -56,7 +56,7 @@ javasprict是一种动态类型语言，不与要指定变量将包含什么数�
 单行注释：快捷键： ctrl + /  
 `// 这是注释`  
 多行注释：快捷键： ctrl + shift + /   
-```
+```javascript
 /*
 hello
 this
@@ -75,7 +75,7 @@ is
 - ++ 累减
 - % 取余数  
 #### 区别x++ / ++x  
-```  
+```  javascript
 var num1 = 3;
 var result1 = num1++;
 console.log(result1);
@@ -110,7 +110,7 @@ console.log(num2);
 
 ###  数组语法
 
-```
+```javascript
 var myarray = new Array(1, 2, 3, 4, 5); // 创建数组同时赋值 
 // or
 var myarray = [1, 2, 3, 4, 5]; // 直接输入一个数组（称“字面量数组”）
@@ -120,7 +120,7 @@ var myarray = [1, 2, 3, 4, 5]; // 直接输入一个数组（称“字面量数�
 
 多维数组就是数组中还包含数组。
 
-```
+```javascript
 var student = [
   ['张三', '男', '18'],
   ['李四', '女', '20'],
@@ -130,24 +130,24 @@ student[0][2]; // returns "18"
 
 ### 修改数组 
 
-```
+```javascript
 var color = ['red', 'green', 'blue', 'yellow'];
 color[0] = 'black';
 color; // returns ["black", "green", "blue", "yellow"]
 ```
 ### 获取数组长度 **length** 
-```
+```javascript
 var color = ['red', 'green', 'blue', 'yellow'];
 color.length; // returns 4
 ```
 ### 数组和字符串之间的转换  
 通过**split()**方法，将字符串转换为数组  
-```
+```javascript
 '1:2:3:4'.split(':'); // returns ["1", "2", "3", "4"]
 '|a|b|c'.split('|'); // returns ["", "a", "b", "c"]
 ```
 通过**join()**方法将数组转换为字符串  
-```
+```javascript
 ['1', '2', '3', '4'].join(':'); 
 // returns "1:2:3:4"
 ['', 'a', 'b', 'c'].join('|'); 
@@ -158,13 +158,13 @@ color.length; // returns 4
 ### 添加和删除数组项   
 使用**push()**方法在数组尾部添加一个或多个元素。
 
-```
+```javascript
 var arr = ['1', '2', '3', '4'];
 arr.push('5', '6');
 arr; // returns ["1", "2", "3", "4", "5", "6"]
 ```
 使用`pop()`方法可以删除数组的最后一个元素，把数组长度减1，并返回它删除的元素的值。如果数组已空，则`pop()`不改变数组，返回`undefined`值。
-> ```
+> ```javascript
 > var arr = ['1', '2', '3', '4'];
 > arr.pop(); // returns 4
 > arr; // returns ["1", "2", "3"]
@@ -183,7 +183,132 @@ arr; // returns ["1", "2", "3", "4", "5", "6"]
 
 null 和 undefined 的值不等于 0，它们的值相等，但是类型不相等。undefined 表示所有没有赋值变量的默认值，而 null 则表示一个变量不再指向任何对象地址。
 
+### 字符串  
 
+单引号和双引号都可以包扩字符串，字符串中有单引号就用双引号包扩，有双引号就用单引号包扩，除此之外，还有一种方法可以实现在字符串中使用引号，即使用转义符号。在JavaScript中，通过在符号前放一个反斜杠来实现。
+
+```javascript
+var x1 = 'I\'ve got no right to take my place...';
+```
+
+#### 常用的转义符  
+
+<img src="https://doc.shiyanlou.com/document-uid897174labid9222timestamp1547519780285.png" alt="1"  />
+
+#### 字符串的连接  
+
+通过`+`可以连接字符串。
+
+```javascript
+var one = 'hello';
+var two = 'Lxk';
+result = one + two;
+```
+
+> 输出结果:"hello,Lxk"。
+
+扩展：在控制台输入'LXk'+18,输出结果：Lxk18。输入"20"+20,输出2020
+
+#### 字符串的转换 
+
+通过`toString()`函数可以把数字转换成字符串。
+
+```javascript
+var myNum = 111;
+var myString = myNum.toString();
+typeof myString;
+```
+
+通过`Number()`可以把对象传递给它的**字符串类型的数字转换成数字**。
+
+```javascript
+var myString ='111';
+var myNum = Number(myString);
+typeof = myNum;
+```
+
+扩展：如果传递给它的字符串不是纯数字，则返回的不是数字，而是NaN(not a number)。
+
+#### 获取字符串的长度  
+
+通过`length`属性来获取字符串的长度，结果返回一个数字。
+
+```javascript
+var myString = 'hello world ';
+myString.length;
+```
+
+> 运行结果:12(10个字母加2个空格)。
+
+扩展：如何查找字符串中的第N个字符：
+
+```javascript
+myString[N-1]
+```
+
+#### 在字符串中查找子字符串并提取它  
+
+通过`indexof()`可以查找一段话中是否包含一个词或一个字。
+
+```javascript
+str.indexOf(searchValue,fromIndex);
+```
+
+> str 指的是我们需要查的较长的字符串，`searchValue` 表示我们指定的较小的字符串，`fromIndex` 表示调用该方法的字符串中开始查找的位置，是一个可选的任意整数值，也可以不写，默认是 0 表示从头开始查，`fromIndex < 0` 和 `fromIndex = 0` 是一样的效果，表示从头开始查找整个字符串。如果 `fromIndex >= str.length`，则该方法的返回值为 -1。这里有个特殊的情况：就是如果被查找的字符串（searchValue）是一个空字符串，那么当 `fromIndex <= 0` 时返回 0，`0 < fromIndex <= str.length` 时返回 `fromIndex`，`fromIndex > str.length` 时返回 `str.length`。
+
+> ```javascript
+> 'Blue Sky'.indexOf('Blue'); // returns  0
+> 'Blue Sky'.indexOf('Ble'); // returns -1
+> 'Blue Sky'.indexOf('Sky', 0); // returns  5
+> 'Blue Sky'.indexOf('Sky', -1); // returns  5
+> 'Blue Sky'.indexOf('Sky', 5); // returns  5
+> 'Blue Sky'.indexOf('Sky', 9); // returns -1
+> 'Blue Sky'.indexOf('', 0); // returns  0
+> 'Blue Sky'.indexOf('', 5); // returns 5
+> 'Blue Sky'.indexOf('', 9); // returns 8
+> ```
+
+扩展：返回值指的是指定值第一次出现的索引，如果没有找到返回 -1。`indexOf()` 方法区分大小写，比如：
+
+```javascript
+'Blue Sky'.indexOf('blue'); // returns -1
+'Blue Sky'.indexOf('Blue'); // returns 0
+```
+
+通过`slice()`来提取子字符串
+
+```javascript
+'Blue Sky'.slice(0, 3); // returns "Blu"
+```
+
+注：`slice(strat，end)`，第一个参数 start 是开始提取的字符位置，第二个参数 end 是提取的最后一个字符的后一个位置。所以提取从第一个位置开始，直到但不包括最后一个位置。另外第二个参数也可以不写，不写代表某个字符之后提取字符串中的所有剩余字符。比如：
+
+```javascript
+'Blue Sky'.slice(2); // returns "ue Sky"
+```
+
+#### 转换大小写  
+
+字符串方法 `toLowerCase()` 和 `toUpperCase()` 字符串并将所有字符分别转换为小写或大写。
+
+#### 替换字符串的某部分
+
+可以使用 `replace()` 方法将字符串中的一个子字符串替换为另一个子字符串。
+
+```javascript
+var string = 'I like study';
+string.replace('study', 'sleep'); // returns "I like sleep"
+```
+
+注意这样只能替换第一个出现的字符串，如果字符串是类似 `I like study study`，那么第二个 `study` 不会被替换。
+
+此时可以使用全局替换方法。
+
+```js
+var string = 'I like study study';
+string.replace(/study/g, 'sleep');
+```
 
 <!-- pack   -->
 <!-- query -->
+
