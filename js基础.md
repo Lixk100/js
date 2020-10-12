@@ -175,6 +175,14 @@ arr; // returns ["1", "2", "3", "4", "5", "6"]
 
 `unshift()` 和 `shift()` 从功能上与 `push()` 和 `pop()` 完全相同，只是它们分别作用于数组的开始，而不是结尾。
 
+## NUll和Undefined  
+
+通过控制台测试可以知道
+
+![1](https://doc.shiyanlou.com/document-uid897174labid9222timestamp1547019784085.png)
+
+null 和 undefined 的值不等于 0，它们的值相等，但是类型不相等。undefined 表示所有没有赋值变量的默认值，而 null 则表示一个变量不再指向任何对象地址。
+
 
 
 <!-- pack   -->
